@@ -5,9 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable/background_splash_screen.xml" value="0.345" />
         <entry key="app/src/main/res/drawable/ic_gnb_back.xml" value="0.345" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.790625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_product_detail.xml" value="0.5" />
       </map>
     </option>
   </component>

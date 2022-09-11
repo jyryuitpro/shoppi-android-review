@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // layoutInflater
-        setContentView(R.layout.activity_product_detail)
+        setContentView(R.layout.activity_main)
         Log.d(TAG, "onCreate")
     }
 

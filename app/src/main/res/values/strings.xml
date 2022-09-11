@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">shoppi-android-review</string>
+    <string name="description_product_detail_thumbnail">상품 상세 대표 이미지</string>
 </resources>

@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import org.json.JSONObject
 
@@ -24,13 +26,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button = view.findViewById<Button>(R.id.btn_enter_product_detail)
-        button.setOnClickListener {
+//        val button = view.findViewById<Button>(R.id.btn_enter_product_detail)
+//        button.setOnClickListener {
 //            val transaction = parentFragmentManager.beginTransaction()
 //            transaction.add(R.id.container_main, ProductDetailFragment())
 //            transaction.commit()
-            findNavController().navigate(R.id.action_home_to_product_detail)
-        }
+//            findNavController().navigate(R.id.action_home_to_product_detail)
+//        }
+
+        val toolbarTitle = view.findViewById<TextView>(R.id.toolbar_home_title)
+        val toolbarIcon = view.findViewById<ImageView>(R.id.toolbar_home_icon)
 
         // 실습 : JSON asset 불러오기
         // class AssetLoader로 분리
@@ -53,8 +58,16 @@ class HomeFragment : Fragment() {
             val iconUrl = title.getString("icon_url")
 
             // Data Class를 이용할 경우
-            val titleValue = Title(text, iconUrl)
-            titleValue.text
+//            val titleValue = Title(text, iconUrl)
+//            toolbarTitle.text = titleValue.text
+//            GlideApp.with(this)
+//                .load(titleValue.iconUrl)
+//                .into(toolbarIcon)
+
+            toolbarTitle.text = text
+            GlideApp.with(this)
+                .load(iconUrl)
+                .into(toolbarIcon)
 
             val topBanners = jsonObject.getJSONArray("top_banners")
             val firstBanner = topBanners.getJSONObject(0)

@@ -3,6 +3,8 @@ package io.jyryuitpro.shoppi.android.review
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 private const val TAG = "MainActivity"
@@ -18,6 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navigation_main)
         bottomNavigationView.itemIconTintList = null
+
+        // NavHostFragment가 소유하고 있는 NavController에 대한 참조를 반환
+        val navController = supportFragmentManager.findFragmentById(R.id.container_main)?.findNavController()
+        navController?.let {
+            // setupWithNavController: FragmentContainerView, BottomNavigationView 연결
+            // NavController : NavHostFragment에서 destination의 이동을 관리하는 객체
+            bottomNavigationView.setupWithNavController(it)
+        }
     }
 
     override fun onRestart() {

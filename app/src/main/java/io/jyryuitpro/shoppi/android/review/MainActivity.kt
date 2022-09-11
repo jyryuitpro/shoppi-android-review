@@ -3,6 +3,7 @@ package io.jyryuitpro.shoppi.android.review
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 private const val TAG = "MainActivity"
 
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         // layoutInflater
         setContentView(R.layout.activity_main)
         Log.d(TAG, "onCreate")
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navigation_main)
+        bottomNavigationView.itemIconTintList = null
     }
 
     override fun onRestart() {

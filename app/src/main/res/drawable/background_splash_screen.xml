@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 아래 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:endColor="@color/shoppi_gradient_purple"
+                android:startColor="@color/shoppi_gradient_pink"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- 위 -->
+    <item>
+        <!-- 이미지 참조 -->
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/img_logo" />
+    </item>
+</layer-list>

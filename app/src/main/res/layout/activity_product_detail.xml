@@ -40,6 +40,7 @@
 
             <TextView
                 android:id="@+id/tv_product_brand_name"
+                style="@style/TextSubtitle3.Grey03"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -52,6 +53,7 @@
 
             <TextView
                 android:id="@+id/tv_product_label"
+                style="@style/TextMedium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -64,33 +66,33 @@
 
             <TextView
                 android:id="@+id/tv_product_discount_rate"
+                style="@style/TextMedium.Purple.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:text="10%"
-                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_product_label" />
 
             <TextView
                 android:id="@+id/tv_product_discount_price"
+                style="@style/TextMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="99,800원"
-                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_product_discount_rate"
                 app:layout_constraintStart_toEndOf="@id/tv_product_discount_rate"
                 app:layout_constraintTop_toTopOf="@id/tv_product_discount_rate" />
 
             <TextView
                 android:id="@+id/tv_product_price"
+                style="@style/TextSubtitle2.Grey05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="110,000원"
-                android:textSize="14sp"
                 app:layout_constraintBaseline_toBaselineOf="@id/tv_product_discount_price"
                 app:layout_constraintStart_toEndOf="@id/tv_product_discount_price" />
 
@@ -106,6 +108,7 @@
 
             <TextView
                 android:id="@+id/tv_product_detail_image_title"
+                style="@style/TextSubtitle3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

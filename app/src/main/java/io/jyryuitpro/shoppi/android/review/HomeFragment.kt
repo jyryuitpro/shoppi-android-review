@@ -1,6 +1,7 @@
 package io.jyryuitpro.shoppi.android.review
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,5 +30,19 @@ class HomeFragment : Fragment() {
 //            transaction.commit()
             findNavController().navigate(R.id.action_home_to_product_detail)
         }
+
+        // 실습 : JSON asset 불러오기
+        // class AssetLoader로 분리
+//        context?.assets?.open("home.json")?.use { inputStream ->
+//            val size = inputStream.available()
+//            val bytes = ByteArray(size)
+//            inputStream.read(bytes)
+//            val homeData = String(bytes)
+//            Log.d("homeData", homeData)
+//        }
+
+        val assetLoader = AssetLoader()
+        val homeData = assetLoader.getJsonString(requireContext(), "home.json")
+        Log.d("homeData", homeData ?: "")
     }
 }

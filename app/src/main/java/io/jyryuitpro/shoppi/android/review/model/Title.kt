@@ -1,4 +1,4 @@
-package io.jyryuitpro.shoppi.android.review
+package io.jyryuitpro.shoppi.android.review.model
 
 import com.google.gson.annotations.SerializedName
 

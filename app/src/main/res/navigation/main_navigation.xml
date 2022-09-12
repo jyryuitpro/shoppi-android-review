@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="io.jyryuitpro.shoppi.android.review.ui.HomeFragment"
+        android:name="io.jyryuitpro.shoppi.android.review.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action

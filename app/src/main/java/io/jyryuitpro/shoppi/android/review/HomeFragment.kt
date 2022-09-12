@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 import org.json.JSONObject
 
@@ -101,6 +102,27 @@ class HomeFragment : Fragment() {
             viewpager.adapter = HomeBannerAdapter().apply {
                 submitList(homeData.topBanners)
             }
+
+            // 디바이스의 가로 길이 - 한 페이지의 가로 길이 - 페이지 간의 간격 = 다음 페이지가 이동해야하는 거리 값
+            // dp to px
+            val pageWidth = resources.getDimension(R.dimen.viewpager_item_width)
+            val pageMargin = resources.getDimension(R.dimen.viewpager_item_margin)
+
+            val screenWidth = resources.displayMetrics.widthPixels
+            // val offset = screenWidth - 312dp - 16dp
+            val offset = screenWidth - pageWidth - pageMargin
+
+            viewpager.offscreenPageLimit = 3
+            // PageTransformer
+            viewpager.setPageTransformer { page, position ->
+                Log.d("setPageTransformer", "$position")
+                page.translationX = position * -offset
+            }
+
+            // TabConfigurationStrategy
+            TabLayoutMediator(viewpagerIndicator, viewpager) { tab, position ->
+
+            }.attach()
 
 //            val topBanners = jsonObject.getJSONArray("top_banners")
 //            val firstBanner = topBanners.getJSONObject(0)

@@ -1,4 +1,4 @@
-package io.jyryuitpro.shoppi.android.review
+package io.jyryuitpro.shoppi.android.review.before.aac
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

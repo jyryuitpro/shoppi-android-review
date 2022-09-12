@@ -1,4 +1,4 @@
-package io.jyryuitpro.shoppi.android.review
+package io.jyryuitpro.shoppi.android.review.before.aac
 
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +14,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
+import io.jyryuitpro.shoppi.android.review.GlideApp
+import io.jyryuitpro.shoppi.android.review.R
 import org.json.JSONObject
 
 // https://developer.android.com/guide/fragments/lifecycle

@@ -9,6 +9,7 @@ plugins {
 ext {
     navVersion = '2.5.2'
     glideVersion = '4.13.2'
+    retrofitVersion = '2.9.0'
 }
 
 task clean(type: Delete) {

@@ -1,4 +1,4 @@
-package io.jyryuitpro.shoppi.android.review.repository
+package io.jyryuitpro.shoppi.android.review.repository.home
 
 import com.google.gson.Gson
 import io.jyryuitpro.shoppi.android.review.AssetLoader

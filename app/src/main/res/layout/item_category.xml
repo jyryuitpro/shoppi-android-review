@@ -5,11 +5,15 @@
 
     <data>
         <variable
+            name="viewModel"
+            type="io.jyryuitpro.shoppi.android.review.ui.category.CategoryViewModel" />
+        <variable
             name="category"
             type="io.jyryuitpro.shoppi.android.review.model.Category" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:onClick="@{() -> viewModel.openCategoryDetail(category)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"

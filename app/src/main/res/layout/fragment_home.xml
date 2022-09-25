@@ -18,10 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- android:background="@color/shoppi_white" 삭제 -->
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/shoppi_white"
                 app:contentInsetStart="0dp"
                 app:layout_scrollFlags="scroll|enterAlways">
 
